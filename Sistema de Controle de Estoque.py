@@ -1,7 +1,6 @@
 dic = {}
-limite = 10
 while True:
-    print('Bem vindo ao Sistema de Controle de Estoque, aqui você poderá eliminar os estoques, adicionar estoque e ver o estoque existente. Esse programa é limitado a 10 tipos de produtos.')
+    print('Bem vindo ao Sistema de Controle de Estoque, aqui você poderá eliminar os estoques, adicionar estoque e ver o estoque existente.')
     print('------------------------------------------------------------------------------------------------------------------------------------')
     decisao = int(input('''
 1) Adicionar estoque
@@ -23,7 +22,6 @@ O que você deseja fazer?
             nomedoproduto = input('Digite o nome do produto que você deseja adicionar: ')
             quantidadedoproduto = int(input('Digite a quantidade de estoque do produto informado: '))
             dic[nomedoproduto] = quantidadedoproduto
-            limite -= 1
             print('------------------------------------------------------------------------------------------------------------------------------------')
 
         if decisao3 == 2:
@@ -68,7 +66,3 @@ O que você deseja fazer?
         print('Obrigado por usar o meu programa!')
         print('------------------------------------------------------------------------------------------------------------------------------------')
         break
-
-    if limite == 0:
-        print('Você já atingiu o limite de 10 produtos, por favor, não utilize mais a primeira função.')
-        print('------------------------------------------------------------------------------------------------------------------------------------')
