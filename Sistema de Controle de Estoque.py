@@ -8,13 +8,29 @@ while True:
 2) Ver estoque existente
 3) Eliminar estoque
 4) Fechar o programa
+                        
 '''))
+    print('------------------------------------------------------------------------------------------------------------------------------------')
     if decisao == 1:
-        nomedoproduto = input('Digite o nome do produto que você deseja adicionar: ')
-        quantidadedoproduto = int(input('Digite a quantidade atualizada do produto informado: '))
-        dic[nomedoproduto] = quantidadedoproduto
-        limite -= 1
-        print('------------------------------------------------------------------------------------------------------------------------------------')
+        decisao3 = int(input('''
+O que você deseja fazer?
+
+1) Registrar um novo produto e seu estoque
+2) Adicionar estoque a um produto já existente
+                             
+'''))
+        if decisao3 == 1:
+            nomedoproduto = input('Digite o nome do produto que você deseja adicionar: ')
+            quantidadedoproduto = int(input('Digite a quantidade de estoque do produto informado: '))
+            dic[nomedoproduto] = quantidadedoproduto
+            limite -= 1
+            print('------------------------------------------------------------------------------------------------------------------------------------')
+
+        if decisao3 == 2:
+            nomedoproduto1 = input('Digite o nome do produto que você deseja alterar o estoque, exatamente como você o registrou: ')
+            quantidadedoproduto1 = int(input('Digite a quantidade de estoque atualizada do produto informado: '))
+            dic[nomedoproduto1] = quantidadedoproduto1
+            print('------------------------------------------------------------------------------------------------------------------------------------')
 
 
     if decisao == 2:
@@ -31,6 +47,7 @@ O que você deseja fazer?
 
 1) Deletar um tipo de produto e todo o seu estoque
 2) Deletar uma certa quantidade de estoque de um certo produto
+                             
 '''))
 
         
@@ -54,3 +71,4 @@ O que você deseja fazer?
 
     if limite == 0:
         print('Você já atingiu o limite de 10 produtos, por favor, não utilize mais a primeira função.')
+        print('------------------------------------------------------------------------------------------------------------------------------------')
