@@ -18,6 +18,7 @@ O que você deseja fazer?
 2) Adicionar estoque a um produto já existente
                              
 '''))
+        print('------------------------------------------------------------------------------------------------------------------------------------')
         if decisao3 == 1:
             nomedoproduto = input('Digite o nome do produto que você deseja adicionar: ')
             quantidadedoproduto = int(input('Digite a quantidade de estoque do produto informado: '))
@@ -52,12 +53,12 @@ O que você deseja fazer?
         print('------------------------------------------------------------------------------------------------------------------------------------')
 
         if decisao2 == 1:
-            nomedoprodutopradeletar = input('Qual é o produto que você deseja deletar? Coloque o nome do produto exatamente igual a como você adicionou antes: ')
+            nomedoprodutopradeletar = input('Qual é o produto que você deseja deletar? Coloque o nome do produto exatamente igual a como você o registrou: ')
             dic.pop(nomedoprodutopradeletar)
             print('------------------------------------------------------------------------------------------------------------------------------------')
 
         if decisao2 == 2:
-            nomedoprodutoparadeletar = input('Qual o produto que você deseja deletar uma certa quantia? Coloque o nome do produto exatamente igual a como você adicionou antes: ')
+            nomedoprodutoparadeletar = input('Qual é o produto que você deseja deletar uma certa quantia? Coloque o nome do produto exatamente igual a como você o registrou: ')
             quantidadedoprodutoparadeletar = int(input('Quantas unidades desse produto deseja remover? '))
             dic[nomedoprodutoparadeletar] -= quantidadedoprodutoparadeletar
             print('------------------------------------------------------------------------------------------------------------------------------------')
