@@ -67,3 +67,5 @@ O que você deseja fazer?
         print('Obrigado por usar o meu programa!')
         print('------------------------------------------------------------------------------------------------------------------------------------')
         break
+
+input('Pressione qualquer tecla para fechar: ')
